@@ -26,7 +26,7 @@ const getWord = async function () {
     const response = await fetch("https://gist.githubusercontent.com/skillcrush-curriculum/7061f1d4d3d5bfe47efbfbcfe42bf57e/raw/5ffc447694486e7dea686f34a6c085ae371b43fe/words.txt");
     const words = await response.text();
     const wordArray = words.split("\n");
-    const randomIndex = Math.floor(Math.random() * wordArray.lenth);
+    const randomIndex = Math.floor(Math.random() * wordArray.length);
     word = wordArray[randomIndex].trim();
     placeHolder(word);
 };
@@ -138,7 +138,7 @@ const numOfGuessesRem = function (guess) {
     } else if (remainingGuesses === 1) {
         numOfGuesses.innerText = `${remainingGuesses} guess`;
     } else {
-        numOfGuesses.innertext = `${remainingGuesses} guesses`;
+        numOfGuesses.innerText = `${remainingGuesses} guesses`;
     }
 };
 
